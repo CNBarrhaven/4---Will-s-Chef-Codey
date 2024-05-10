@@ -11,12 +11,17 @@ public class interact : MonoBehaviour
     public GameObject cutMelonPrefab;
     public GameObject melonPrefab;
     public GameObject pizzaPrefab;
+    public GameObject candyCanePrefab;
+    public GameObject lollipopPrefab;
+    public GameObject salmonPrefab;
+    public GameObject ketchupPrefab;
 
     public GameObject heldItem;
     public string heldItemName;
 
     public Service service;
     public Mix mix;
+    public Fry fry;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,25 +64,47 @@ public class interact : MonoBehaviour
                     if (heldItemName == "Cut Tomato")
                     {
                         Destroy(GameObject.Find(heldItem.name));
-                        service.placeTomato();
+                        service.placeItem(heldItemName);
                         heldItemName = "";
                     }
                     if (heldItemName == "Pizza")
                     {
                         Destroy(GameObject.Find(heldItem.name));
-                        service.placePizza();
+                        service.placeItem(heldItemName);
                         heldItemName = "";
                     }
                     if (heldItemName == "Cut Melon")
                     {
                         Destroy(GameObject.Find(heldItem.name));
-                        service.placeMelon();
+                        service.placeItem(heldItemName);
+                        heldItemName = "";
+                    }
+                    if (heldItemName == "Lollipop")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        service.placeItem(heldItemName);
+                        heldItemName = "";
+                    }
+                    if (heldItemName == "Salmon")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        service.placeItem(heldItemName);
+                        heldItemName = "";
+                    }
+                    if (heldItemName == "Ketchup")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        service.placeItem(heldItemName);
+                        heldItemName = "";
+                    }
+                    if (heldItemName == "Candy Cane")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        service.placeItem(heldItemName);
                         heldItemName = "";
                     }
                     break;
                 case "Melons":
-                    if (triggerName == "Melons")
-                    {
                         if (heldItemName != "")
                         {
                             Destroy(GameObject.Find(heldItem.name));
@@ -85,7 +112,6 @@ public class interact : MonoBehaviour
                         heldItem = Instantiate(melonPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Melon";
-                    }
                     break;
                 case "Mixing":
                     if (mix.pizzaReady == true)
@@ -109,7 +135,61 @@ public class interact : MonoBehaviour
                         heldItemName = "";
                     }
                     break;
-
+                case "Candy Canes":
+                    
+                        if (heldItemName != "")
+                        {
+                            Destroy(GameObject.Find(heldItem.name));
+                        }
+                        heldItem = Instantiate(candyCanePrefab, transform, false);
+                        heldItem.transform.localPosition = new Vector3(0, 4, 0);
+                        heldItemName = "Candy Cane";
+                    
+                    break;
+                case "Pan":
+                    if (fry.lollipopReady)
+                    {
+                        heldItem = Instantiate(lollipopPrefab, transform, false);
+                        heldItem.transform.localPosition = new Vector3(0, 4, 0);
+                        heldItemName = "Lollipop";
+                        fry.lollipopReady = false;
+                        fry.lollipop.SetActive(false);
+                    }
+                    else if (fry.salmonReady)
+                    {
+                        heldItem = Instantiate(salmonPrefab, transform, false);
+                        heldItem.transform.localPosition = new Vector3(0, 4, 0);
+                        heldItemName = "Salmon";
+                        fry.salmonReady = false;
+                        fry.salmon.SetActive(false);
+                    }
+                    else if (fry.ketchupReady)
+                    {
+                        heldItem = Instantiate(ketchupPrefab, transform, false);
+                        heldItem.transform.localPosition = new Vector3(0, 4, 0);
+                        heldItemName = "Ketchup";
+                        fry.ketchupReady = false;
+                        fry.ketchup.SetActive(false);
+                    }
+                    else if (heldItemName == "Cut Tomato")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        fry.fryTomato();
+                        heldItemName = "";
+                    }
+                    else if (heldItemName == "Cut Melon")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        fry.fryMelon();
+                        heldItemName = "";
+                    }
+                    else if (heldItemName == "Candy Cane")
+                    {
+                        Destroy(GameObject.Find(heldItem.name));
+                        fry.fryCandyCane();
+                        heldItemName = "";
+                    }
+                    break;
             }
         }
     }

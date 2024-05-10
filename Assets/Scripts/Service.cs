@@ -7,12 +7,20 @@ public class Service : MonoBehaviour
     public GameObject servedTomato;
     public GameObject servedPizza;
     public GameObject servedMelon;
+    public GameObject servedLollipop;
+    public GameObject servedSalmon;
+    public GameObject servedKetchup;
+    public GameObject servedCandyCane;
     // Start is called before the first frame update
     void Start()
     {
         servedTomato.SetActive(false);
         servedPizza.SetActive(false);
         servedMelon.SetActive(false);
+        servedLollipop.SetActive(false);
+        servedSalmon.SetActive(false);
+        servedKetchup.SetActive(false);
+        servedCandyCane.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,18 +29,31 @@ public class Service : MonoBehaviour
         
     }
 
-    public void placeTomato()
+    public void placeItem(string itemName)
     {
-        servedTomato.SetActive(true);
-    }
-
-    public void placePizza()
-    {
-        servedPizza.SetActive(true);
-    }
-
-    public void placeMelon()
-    {
-        servedMelon.SetActive(true);
+        switch (itemName)
+        {
+            case "Cut Tomato":
+                servedTomato.SetActive(true);
+                break;
+            case "Cut Melon":
+                servedMelon.SetActive(true);
+                break;
+            case "Pizza":
+                servedPizza.SetActive(true);
+                break;
+            case "Lollipop":
+                servedLollipop.SetActive(true);
+                break;
+            case "Salmon":
+                servedSalmon.SetActive(true);
+                break;
+            case "Ketchup":
+                servedKetchup.SetActive(true);
+                break;
+            case "Candy Cane":
+                servedCandyCane.SetActive(true);
+                break;
+        }
     }
 }
