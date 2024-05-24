@@ -39,11 +39,8 @@ public class dayScript : MonoBehaviour
 
     public float timer;
 
-    public GameObject orderSlot1;
     public bool slot1Used;
-    public GameObject orderSlot2;
     public bool slot2Used;
-    public GameObject orderSlot3;
     public bool slot3Used;
 
     public orderManager orderManager;

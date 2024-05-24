@@ -56,4 +56,15 @@ public class Service : MonoBehaviour
                 break;
         }
     }
+
+    public void resetServicePlate()
+    {
+        servedTomato.SetActive(false);
+        servedPizza.SetActive(false);
+        servedMelon.SetActive(false);
+        servedLollipop.SetActive(false);
+        servedSalmon.SetActive(false);
+        servedKetchup.SetActive(false);
+        servedCandyCane.SetActive(false);
+    }
 }
