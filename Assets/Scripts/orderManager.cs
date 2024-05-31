@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class orderManager : MonoBehaviour
 {
+    public GameObject ordersLeftText;
+
     public float timer;
     public int day;
 
@@ -32,7 +36,12 @@ public class orderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ordersLeftText.GetComponent<Text>().text = "Order(s) left: " + dayScript.ordersLeft;
+
+        if (dayScript.ordersLeft == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void spawnOrder(Order order)
@@ -130,6 +139,7 @@ public class orderManager : MonoBehaviour
         {
             slot3used = false;
         }
+        dayScript.ordersLeft--;
         serviceScript.resetServicePlate();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class interact : MonoBehaviour
 {
@@ -191,6 +192,11 @@ public class interact : MonoBehaviour
                     }
                     break;
             }
+        }
+
+        if (Input.GetKeyUp("escape"))
+        {
+            SceneManager.LoadScene(1);
         }
     }
 

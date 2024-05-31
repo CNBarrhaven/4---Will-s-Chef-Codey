@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ChefCodey.unity
+    guid: bfb53868b9ec5f0489339e431c7ae39f
+  - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: 769128d27ba94d341bf32a67b267bf9b
   m_configObjects: {}

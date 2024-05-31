@@ -44,14 +44,28 @@ public class dayScript : MonoBehaviour
     public bool slot3Used;
 
     public orderManager orderManager;
+
+    public int dayNumber;
+
+    public static int ordersLeft;
     private void Awake()
     {
-
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        
 
+        if (dayNumber == LevelSelected.levelSelected)
+        {
+            gameObject.SetActive(true);
+            ordersLeft = orders.Count;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

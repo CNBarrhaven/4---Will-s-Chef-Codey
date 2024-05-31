@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589227}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37128156, y: 0.055485103, z: -0.022232592, w: 0.9265944}
+  m_LocalRotation: {x: 0.37128156, y: 0.055485066, z: -0.022232577, w: 0.9265944}
   m_LocalPosition: {x: -0.5, y: 4, z: -4.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1474,6 +1474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41db4e08edfd56248a719959739fdfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ordersLeftText: {fileID: 1373643786}
   timer: 0
   day: 0
   slot1used: 0
@@ -1926,6 +1927,7 @@ MonoBehaviour:
   slot2Used: 0
   slot3Used: 0
   orderManager: {fileID: 321916543}
+  dayNumber: 2
 --- !u!1 &389302459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +1993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389302459}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37128156, y: 0.055485103, z: -0.022232592, w: 0.9265944}
+  m_LocalRotation: {x: 0.37128156, y: 0.055485066, z: -0.022232577, w: 0.9265944}
   m_LocalPosition: {x: -0.5, y: 4, z: -4.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2412,6 +2414,7 @@ MonoBehaviour:
   slot2Used: 0
   slot3Used: 0
   orderManager: {fileID: 321916543}
+  dayNumber: 3
 --- !u!1001 &459549456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7154,6 +7157,7 @@ MonoBehaviour:
   slot2Used: 0
   slot3Used: 0
   orderManager: {fileID: 321916543}
+  dayNumber: 1
 --- !u!4 &1471816689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dd440ca71eec7cb48b4ceee78211b635, type: 3}
