@@ -18,6 +18,7 @@ public class orderManager : MonoBehaviour
     public bool slot3used;
 
     public Service serviceScript;
+    public timerScript timerScript;
 
     public GameObject orderObject1;
     public GameObject orderObject2;
@@ -40,6 +41,10 @@ public class orderManager : MonoBehaviour
 
         if (dayScript.ordersLeft == 0)
         {
+            if (PlayerPrefs.GetFloat(LevelSelected.levelSelected.ToString()) <= timerScript.globalTime)
+            {
+                PlayerPrefs.SetFloat(LevelSelected.levelSelected.ToString(), timerScript.globalTime);
+            }
             SceneManager.LoadScene(1);
         }
     }
