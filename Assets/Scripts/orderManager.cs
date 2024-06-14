@@ -41,9 +41,16 @@ public class orderManager : MonoBehaviour
 
         if (dayScript.ordersLeft == 0)
         {
-            if (PlayerPrefs.GetFloat(LevelSelected.levelSelected.ToString()) <= timerScript.globalTime)
+            if (PlayerPrefs.GetFloat(LevelSelected.levelSelected.ToString()) <= 1)
+            {
+                PlayerPrefs.SetFloat(LevelSelected.levelSelected.ToString(), 3600);
+            }
+            if (PlayerPrefs.GetFloat(LevelSelected.levelSelected.ToString()) >= timerScript.globalTime)
             {
                 PlayerPrefs.SetFloat(LevelSelected.levelSelected.ToString(), timerScript.globalTime);
+                PlayerPrefs.SetString(LevelSelected.levelSelected.ToString() + "highscore", PlayerPrefs.GetString("currentTime"));
+                print(PlayerPrefs.GetFloat(LevelSelected.levelSelected.ToString()));
+                print(PlayerPrefs.GetString(LevelSelected.levelSelected.ToString()));
             }
             SceneManager.LoadScene(1);
         }

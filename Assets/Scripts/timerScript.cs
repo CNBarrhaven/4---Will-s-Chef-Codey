@@ -26,8 +26,8 @@ public class timerScript : MonoBehaviour
         switch (LevelSelected.levelSelected)
         {
             case 1:
-                bronzeTime = "01:30";
-                silverTime = "01:10";
+                bronzeTime = "01:10";
+                silverTime = "01:00";
                 goldTime = "00:50";
                 platinumTime = "00:40";
                 break;
@@ -60,6 +60,6 @@ public class timerScript : MonoBehaviour
             SceneManager.LoadScene(1);
         }
         timerText.text = minutes.ToString() + ":" + seconds.ToString();
-        PlayerPrefs.SetString("currentTime", timerText.text);
+        PlayerPrefs.SetString("currentTime", timerText.text.ToString());
     }
 }

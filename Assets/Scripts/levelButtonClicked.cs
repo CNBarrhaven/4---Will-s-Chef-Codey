@@ -23,36 +23,48 @@ public class levelButtonClicked : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.transform.GetChild(4).gameObject.GetComponent<Text>().text = "High Score: " + PlayerPrefs.GetString(levelNumber + "highscore");
+
+        Medals.platinums = 0;
+        Medals.golds = 0;
+        Medals.silvers = 0;
+        Medals.bronzes = 0;
+        Medals.defaultclears = 0;
 
         if (PlayerPrefs.GetFloat(levelNumber) <= platinumTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = new Color(0.8f, 0.8f, 1f);
             gameObject.GetComponent<Button>().colors = cb;
+            Medals.platinums++;
         }
         else if (PlayerPrefs.GetFloat(levelNumber) <= goldTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = new Color(1f, 0.8f,0.3f);
             gameObject.GetComponent<Button>().colors = cb;
+            Medals.golds++;
         }
         else if (PlayerPrefs.GetFloat(levelNumber) <= silverTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = new Color(0.8f, 0.8f, 0.8f);
             gameObject.GetComponent<Button>().colors = cb;
+            Medals.silvers++;
         }
         else if (PlayerPrefs.GetFloat(levelNumber) <= bronzeTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = new Color(0.8f, 0.5f, 0.2f);
             gameObject.GetComponent<Button>().colors = cb;
+            Medals.bronzes++;
         }
         else
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = Color.white;
             gameObject.GetComponent<Button>().colors = cb;
+            Medals.defaultclears++;
         }
 
         if (PlayerPrefs.GetFloat(levelNumber) == 0)

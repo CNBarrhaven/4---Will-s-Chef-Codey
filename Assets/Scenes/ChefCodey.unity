@@ -1155,6 +1155,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c3efed6caca157b498300aade43994b9, type: 3}
   m_PrefabInstance: {fileID: 223603284}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &248967068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248967069}
+  - component: {fileID: 248967071}
+  - component: {fileID: 248967070}
+  m_Layer: 5
+  m_Name: Guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &248967069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1624515457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 622.2963, y: 178.68745}
+  m_SizeDelta: {x: 616.3951, y: 686.2007}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248967070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5e46e4de70600c341b6f3dc0523dfa33, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &248967071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248967068}
+  m_CullTransparentMesh: 1
 --- !u!4 &265730716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c945b3fa736b40940a696ec897b85013, type: 3}
@@ -1992,9 +2067,9 @@ MonoBehaviour:
   orders:
   - appearTime: 5
     isSpawned: 0
-    needsCutTomato: 0
-    needsCutMelon: 0
-    needsPizza: 1
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
@@ -2003,16 +2078,25 @@ MonoBehaviour:
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
-    needsPizza: 1
+    needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 50
     isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 75
+    isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 1
-    needsPizza: 1
+    needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
@@ -2470,23 +2554,32 @@ MonoBehaviour:
   orders:
   - appearTime: 5
     isSpawned: 0
-    needsCutTomato: 1
+    needsCutTomato: 0
     needsCutMelon: 0
-    needsPizza: 0
-    needsCandyCane: 1
+    needsPizza: 1
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 8
     isSpawned: 0
-    needsCutTomato: 0
-    needsCutMelon: 1
+    needsCutTomato: 1
+    needsCutMelon: 0
     needsPizza: 0
-    needsCandyCane: 1
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 30
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 50
     isSpawned: 0
     needsCutTomato: 0
     needsCutMelon: 0
@@ -2497,10 +2590,10 @@ MonoBehaviour:
     needsLollipop: 0
   - appearTime: 50
     isSpawned: 0
-    needsCutTomato: 1
+    needsCutTomato: 0
     needsCutMelon: 1
     needsPizza: 1
-    needsCandyCane: 1
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
@@ -2614,6 +2707,147 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6327373632124358137, guid: 0329acc1efc28324e94f5bd5a062069e, type: 3}
   m_PrefabInstance: {fileID: 1788426091}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &481857048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481857049}
+  - component: {fileID: 481857050}
+  m_Layer: 0
+  m_Name: day9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481857049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481857048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481857050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481857048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 6
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 7
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 8
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 9
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 10
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 1
+    needsLollipop: 0
+  - appearTime: 11
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 1
+  - appearTime: 60
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 120
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  - appearTime: 240
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 9
 --- !u!1001 &494365654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4317,6 +4551,7 @@ RectTransform:
   - {fileID: 86742195}
   - {fileID: 1373643787}
   - {fileID: 1143836468}
+  - {fileID: 1624515457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5191,6 +5426,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &960573178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960573179}
+  - component: {fileID: 960573180}
+  m_Layer: 0
+  m_Name: day10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960573179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960573178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &960573180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960573178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  - appearTime: 65
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  - appearTime: 125
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 10
 --- !u!1 &1003895310
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5574,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8431152066396162777, guid: 2c49621a8650a60459ee1c1548bee1d4, type: 3}
   m_PrefabInstance: {fileID: 1813847739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1043728020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043728021}
+  - component: {fileID: 1043728022}
+  m_Layer: 0
+  m_Name: day5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1043728021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043728020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1043728022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043728020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 20
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 40
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 60
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 120
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 160
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 5
 --- !u!1001 &1062443520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7308,6 +7726,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 57439065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1444957894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444957895}
+  - component: {fileID: 1444957896}
+  m_Layer: 0
+  m_Name: day7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444957895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444957894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1444957896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444957894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 1
+  - appearTime: 20
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 1
+  - appearTime: 40
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 1
+  - appearTime: 60
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 1
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 7
 --- !u!1001 &1446230455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7908,6 +8413,55 @@ Transform:
   - {fileID: 1087592999}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1624515456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624515457}
+  - component: {fileID: 1624515458}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1624515457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624515456}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 248967069}
+  m_Father: {fileID: 818483426}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1624515458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624515456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c604536ffb9b0e459cf3b9b95661b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663307809
 GameObject:
   m_ObjectHideFlags: 0
@@ -8439,6 +8993,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4297064017948486, guid: d15472a0ad9a62e49a54ad28cabd11cb, type: 3}
   m_PrefabInstance: {fileID: 1709177439}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1713802246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713802247}
+  - component: {fileID: 1713802248}
+  m_Layer: 0
+  m_Name: day6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1713802247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713802246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713802248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713802246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 20
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 40
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 60
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 120
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 160
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 6
 --- !u!1 &1720047434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10394,8 +11053,8 @@ MonoBehaviour:
   orders:
   - appearTime: 5
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
     needsPizza: 0
     needsCandyCane: 1
     needsKetchup: 0
@@ -10403,15 +11062,6 @@ MonoBehaviour:
     needsLollipop: 0
   - appearTime: 8
     isSpawned: 0
-    needsCutTomato: 0
-    needsCutMelon: 0
-    needsPizza: 1
-    needsCandyCane: 0
-    needsKetchup: 0
-    needsSalmon: 0
-    needsLollipop: 0
-  - appearTime: 30
-    isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
     needsPizza: 0
@@ -10419,10 +11069,28 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
+  - appearTime: 30
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
   - appearTime: 50
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 120
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
     needsPizza: 1
     needsCandyCane: 1
     needsKetchup: 0
@@ -10476,6 +11144,12 @@ Transform:
   - {fileID: 379256059}
   - {fileID: 457794296}
   - {fileID: 2059537933}
+  - {fileID: 1043728021}
+  - {fileID: 1713802247}
+  - {fileID: 1444957895}
+  - {fileID: 2138065717}
+  - {fileID: 481857049}
+  - {fileID: 960573179}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2071677877
@@ -10612,6 +11286,102 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 595f07ceb372f6843847d984ba9aaf8b, type: 3}
+--- !u!1 &2138065716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138065717}
+  - component: {fileID: 2138065718}
+  m_Layer: 0
+  m_Name: day8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138065717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138065716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067929519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138065718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138065716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d750195d033340b5d8dc1cae3c59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders:
+  - appearTime: 5
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
+    needsSalmon: 1
+    needsLollipop: 0
+  - appearTime: 20
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  - appearTime: 50
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 1
+    needsKetchup: 0
+    needsSalmon: 0
+    needsLollipop: 0
+  - appearTime: 80
+    isSpawned: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 0
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  - appearTime: 140
+    isSpawned: 0
+    needsCutTomato: 1
+    needsCutMelon: 1
+    needsPizza: 1
+    needsCandyCane: 1
+    needsKetchup: 1
+    needsSalmon: 1
+    needsLollipop: 1
+  timer: 0
+  slot1Used: 0
+  slot2Used: 0
+  slot3Used: 0
+  orderManager: {fileID: 321916543}
+  dayNumber: 8
 --- !u!1001 &2142862137
 PrefabInstance:
   m_ObjectHideFlags: 0

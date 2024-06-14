@@ -117,6 +117,7 @@ public class interact : MonoBehaviour
                 case "Mixing":
                     if (mix.pizzaReady == true)
                     {
+                        Destroy(GameObject.Find(heldItem.name));
                         heldItem = Instantiate(pizzaPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Pizza";
@@ -150,6 +151,7 @@ public class interact : MonoBehaviour
                 case "Pan":
                     if (fry.lollipopReady)
                     {
+                        Destroy(GameObject.Find(heldItem.name));
                         heldItem = Instantiate(lollipopPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Lollipop";
@@ -158,6 +160,7 @@ public class interact : MonoBehaviour
                     }
                     else if (fry.salmonReady)
                     {
+                        Destroy(GameObject.Find(heldItem.name));
                         heldItem = Instantiate(salmonPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Salmon";
@@ -166,6 +169,7 @@ public class interact : MonoBehaviour
                     }
                     else if (fry.ketchupReady)
                     {
+                        Destroy(GameObject.Find(heldItem.name));
                         heldItem = Instantiate(ketchupPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Ketchup";
