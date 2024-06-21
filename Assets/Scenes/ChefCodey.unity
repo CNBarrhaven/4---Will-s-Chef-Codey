@@ -1361,8 +1361,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 0.1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.000002, y: 2.6711547, z: 12.161911}
+  m_Center: {x: 4.0583076e-15, y: -1.2855778, z: -1.0809555}
 --- !u!1001 &295757553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2074,7 +2074,7 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 20
+  - appearTime: 15
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
@@ -2083,7 +2083,7 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 50
+  - appearTime: 30
     isSpawned: 0
     needsCutTomato: 0
     needsCutMelon: 1
@@ -2092,7 +2092,7 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 75
+  - appearTime: 45
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 1
@@ -2570,28 +2570,19 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 30
+  - appearTime: 10
     isSpawned: 0
-    needsCutTomato: 1
+    needsCutTomato: 0
     needsCutMelon: 1
     needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 50
+  - appearTime: 20
     isSpawned: 0
     needsCutTomato: 0
     needsCutMelon: 0
-    needsPizza: 1
-    needsCandyCane: 0
-    needsKetchup: 0
-    needsSalmon: 0
-    needsLollipop: 0
-  - appearTime: 50
-    isSpawned: 0
-    needsCutTomato: 0
-    needsCutMelon: 1
     needsPizza: 1
     needsCandyCane: 0
     needsKetchup: 0
@@ -2782,7 +2773,7 @@ MonoBehaviour:
   - appearTime: 8
     isSpawned: 0
     needsCutTomato: 1
-    needsCutMelon: 0
+    needsCutMelon: 1
     needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 0
@@ -3205,8 +3196,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 0.1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 2.2952507, z: 12.129805}
+  m_Center: {x: 0, y: -1.0976254, z: -1.0649023}
 --- !u!1001 &564974990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4888,8 +4879,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000002, y: 0.1, z: 10.000005}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.000002, y: 2.2751641, z: 11.703736}
+  m_Center: {x: 1.24462e-15, y: -1.0875821, z: -0.85186625}
 --- !u!1001 &918796706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5632,35 +5623,35 @@ MonoBehaviour:
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
-    needsPizza: 1
+    needsPizza: 0
     needsCandyCane: 1
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 40
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 0
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 1
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 60
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
     needsCandyCane: 1
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 120
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
     needsPizza: 1
-    needsCandyCane: 1
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
@@ -5668,8 +5659,8 @@ MonoBehaviour:
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 1
-    needsPizza: 1
-    needsCandyCane: 1
+    needsPizza: 0
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
@@ -7797,11 +7788,11 @@ MonoBehaviour:
     needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
-    needsLollipop: 1
+    needsLollipop: 0
   - appearTime: 60
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
     needsPizza: 1
     needsCandyCane: 0
     needsKetchup: 1
@@ -8588,8 +8579,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 0.1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 2.767255, z: 11.668664}
+  m_Center: {x: 0, y: -1.3336276, z: -0.834332}
 --- !u!4 &1668521177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c945b3fa736b40940a696ec897b85013, type: 3}
@@ -9068,26 +9059,26 @@ MonoBehaviour:
   - appearTime: 60
     isSpawned: 0
     needsCutTomato: 0
-    needsCutMelon: 0
-    needsPizza: 1
-    needsCandyCane: 1
-    needsKetchup: 1
+    needsCutMelon: 1
+    needsPizza: 0
+    needsCandyCane: 0
+    needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 120
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 0
-    needsCandyCane: 1
-    needsKetchup: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 1
+    needsCandyCane: 0
+    needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
   - appearTime: 160
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
+    needsPizza: 0
     needsCandyCane: 1
     needsKetchup: 0
     needsSalmon: 0
@@ -11065,7 +11056,7 @@ MonoBehaviour:
     needsCutTomato: 1
     needsCutMelon: 0
     needsPizza: 0
-    needsCandyCane: 1
+    needsCandyCane: 0
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
@@ -11082,25 +11073,7 @@ MonoBehaviour:
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 0
-    needsPizza: 1
-    needsCandyCane: 1
-    needsKetchup: 0
-    needsSalmon: 0
-    needsLollipop: 0
-  - appearTime: 120
-    isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 1
-    needsCandyCane: 1
-    needsKetchup: 0
-    needsSalmon: 0
-    needsLollipop: 0
-  - appearTime: 120
-    isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
-    needsPizza: 1
+    needsPizza: 0
     needsCandyCane: 1
     needsKetchup: 0
     needsSalmon: 0
@@ -11362,20 +11335,20 @@ MonoBehaviour:
     isSpawned: 0
     needsCutTomato: 0
     needsCutMelon: 0
-    needsPizza: 1
+    needsPizza: 0
     needsCandyCane: 0
     needsKetchup: 1
-    needsSalmon: 1
+    needsSalmon: 0
     needsLollipop: 1
   - appearTime: 140
     isSpawned: 0
-    needsCutTomato: 1
-    needsCutMelon: 1
+    needsCutTomato: 0
+    needsCutMelon: 0
     needsPizza: 1
-    needsCandyCane: 1
-    needsKetchup: 1
+    needsCandyCane: 0
+    needsKetchup: 0
     needsSalmon: 1
-    needsLollipop: 1
+    needsLollipop: 0
   timer: 0
   slot1Used: 0
   slot2Used: 0

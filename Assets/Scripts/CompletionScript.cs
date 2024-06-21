@@ -14,25 +14,39 @@ public static class Medals
 
 public class CompletionScript : MonoBehaviour
 {
+    public levelButtonClicked[] medalCheckScripts;
+
+
     // Start is called before the first frame update
     void Start()
     {
-/*        if (PlayerPrefs.GetInt("percentage") == 0)
-        {
-            PlayerPrefs.SetInt("percentage", 1);
-        }*/
+        Medals.platinums = 0;
+        Medals.golds = 0;
+        Medals.silvers = 0;
+        Medals.bronzes = 0;
+        Medals.defaultclears = 0;
 
+        for (int i = 0; i < medalCheckScripts.Length; i++)
+        {
+            medalCheckScripts[i].checkMedals();
+        }
         checkPercentage();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         gameObject.GetComponent<Text>().text = PlayerPrefs.GetInt("percentage").ToString() + "% Completed";
     }
 
     public void checkPercentage()
     {
+        /*print(Medals.platinums);
+        print(Medals.golds);
+        print(Medals.silvers);
+        print(Medals.bronzes);
+        print(Medals.defaultclears);*/
+
         PlayerPrefs.SetInt("percentage", 0);
         for (int i = 0; i < Medals.platinums; i++)
         {

@@ -26,16 +26,22 @@ public class timerScript : MonoBehaviour
         switch (LevelSelected.levelSelected)
         {
             case 1:
-                bronzeTime = "01:10";
+                bronzeTime = "01:20";
                 silverTime = "01:00";
-                goldTime = "00:50";
-                platinumTime = "00:40";
+                goldTime = "00:40";
+                platinumTime = "00:30";
                 break;
             case 2:
-                
+                bronzeTime = "01:30";
+                silverTime = "02:00";
+                goldTime = "01:30";
+                platinumTime = "01:10";
                 break;
             case 3:
-                
+                bronzeTime = "03:20";
+                silverTime = "02:40";
+                goldTime = "02:10";
+                platinumTime = "01:40";
                 break;
         }
         bronzeText.text = "Bronze: " + bronzeTime;

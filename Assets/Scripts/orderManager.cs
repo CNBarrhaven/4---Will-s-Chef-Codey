@@ -62,7 +62,6 @@ public class orderManager : MonoBehaviour
 
         if (!slot1used)
         {
-            Debug.Log("used slot 1 since it was empty");
             chosenSlot = orderObject1;
             order1 = order;
             order.isSpawned = true;
@@ -70,7 +69,6 @@ public class orderManager : MonoBehaviour
         }
         else if (!slot2used)
         {
-            Debug.Log("used slot 2 since it was empty");
             chosenSlot = orderObject2;
             order2 = order;
             order.isSpawned = true;
@@ -78,7 +76,6 @@ public class orderManager : MonoBehaviour
         }
         else if (!slot3used)
         {
-            Debug.Log("used slot 3 since it was empty");
             chosenSlot = orderObject3;
             order3 = order;
             order.isSpawned = true;
@@ -97,29 +94,63 @@ public class orderManager : MonoBehaviour
             {
                 chosenSlot.transform.GetChild(1).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(1).gameObject.SetActive(false);
+            }
+
             if (order.needsCutMelon)
             {
                 chosenSlot.transform.GetChild(2).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(2).gameObject.SetActive(false);
+            }
+
             if (order.needsPizza)
             {
                 chosenSlot.transform.GetChild(3).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(3).gameObject.SetActive(false);
+            }
+
             if (order.needsCandyCane)
             {
                 chosenSlot.transform.GetChild(4).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(4).gameObject.SetActive(false);
+            }
+
             if (order.needsKetchup)
             {
                 chosenSlot.transform.GetChild(5).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(5).gameObject.SetActive(false);
+            }
+
             if (order.needsSalmon)
             {
                 chosenSlot.transform.GetChild(6).gameObject.SetActive(true);
             }
+            else
+            {
+                chosenSlot.transform.GetChild(6).gameObject.SetActive(false);
+            }
+
             if (order.needsLollipop)
             {
                 chosenSlot.transform.GetChild(7).gameObject.SetActive(true);
+            }
+            else
+            {
+                chosenSlot.transform.GetChild(7).gameObject.SetActive(false);
             }
         }
         // you need some kind of public variable for which order slots are full

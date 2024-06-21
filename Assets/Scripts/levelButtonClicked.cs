@@ -11,6 +11,8 @@ public static class LevelSelected
 
 public class levelButtonClicked : MonoBehaviour
 {
+    public CompletionScript completionScript;
+
     public string levelNumber;
 
     public float bronzeTime;
@@ -24,14 +26,32 @@ public class levelButtonClicked : MonoBehaviour
     void Start()
     {
         gameObject.transform.GetChild(4).gameObject.GetComponent<Text>().text = "High Score: " + PlayerPrefs.GetString(levelNumber + "highscore");
+    }
 
-        Medals.platinums = 0;
-        Medals.golds = 0;
-        Medals.silvers = 0;
-        Medals.bronzes = 0;
-        Medals.defaultclears = 0;
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
-        if (PlayerPrefs.GetFloat(levelNumber) <= platinumTime)
+    public void levelButtonPressed(int levelNumber)
+    {
+        LevelSelected.levelSelected = levelNumber;
+        SceneManager.LoadScene(0);
+    }
+
+    public void checkMedals()
+    {
+        print("Level High Score: " + PlayerPrefs.GetFloat(levelNumber));
+        print("Platinum Time: " + platinumTime);
+
+        if (PlayerPrefs.GetFloat(levelNumber) == 0)
+        {
+            ColorBlock cb = gameObject.GetComponent<Button>().colors;
+            cb.normalColor = Color.white;
+            gameObject.GetComponent<Button>().colors = cb;
+        }
+        else if (PlayerPrefs.GetFloat(levelNumber) <= platinumTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
             cb.normalColor = new Color(0.8f, 0.8f, 1f);
@@ -41,7 +61,7 @@ public class levelButtonClicked : MonoBehaviour
         else if (PlayerPrefs.GetFloat(levelNumber) <= goldTime)
         {
             ColorBlock cb = gameObject.GetComponent<Button>().colors;
-            cb.normalColor = new Color(1f, 0.8f,0.3f);
+            cb.normalColor = new Color(1f, 0.8f, 0.3f);
             gameObject.GetComponent<Button>().colors = cb;
             Medals.golds++;
         }
@@ -67,27 +87,7 @@ public class levelButtonClicked : MonoBehaviour
             Medals.defaultclears++;
         }
 
-        if (PlayerPrefs.GetFloat(levelNumber) == 0)
-        {
-            ColorBlock cb = gameObject.GetComponent<Button>().colors;
-            cb.normalColor = Color.white;
-            gameObject.GetComponent<Button>().colors = cb;
-        }
-
-
         
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void levelButtonPressed(int levelNumber)
-    {
-        LevelSelected.levelSelected = levelNumber;
-        SceneManager.LoadScene(0);
+        print("Total Platinums after calculation: " + Medals.platinums);
     }
 }

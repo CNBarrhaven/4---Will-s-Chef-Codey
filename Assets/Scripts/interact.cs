@@ -117,7 +117,10 @@ public class interact : MonoBehaviour
                 case "Mixing":
                     if (mix.pizzaReady == true)
                     {
-                        Destroy(GameObject.Find(heldItem.name));
+                        if (heldItemName != "")
+                        {
+                            Destroy(GameObject.Find(heldItem.name));
+                        }
                         heldItem = Instantiate(pizzaPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Pizza";
