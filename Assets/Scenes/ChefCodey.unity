@@ -400,8 +400,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4545968, y: 1, z: 2.4068108}
-  m_Center: {x: -0.22729838, y: 0, z: 0.02191186}
+  m_Size: {x: 1.4545968, y: 1, z: 3.0232005}
+  m_Center: {x: -0.22729838, y: 0, z: -0.009867728}
 --- !u!4 &57439065
 Transform:
   m_ObjectHideFlags: 0
@@ -1718,8 +1718,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9413834, y: 0.87661743, z: 1.6096312}
-  m_Center: {x: 3.762045, y: 6.0925627, z: 2.5799394}
+  m_Size: {x: 2.3658278, y: 0.87661743, z: 2.1827092}
+  m_Center: {x: 3.5498228, y: 6.0925627, z: 2.866478}
 --- !u!4 &343132224
 Transform:
   m_ObjectHideFlags: 0
@@ -3959,6 +3959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db76dc2a7a4b044d97f412e1f970338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPosition: {x: 0, y: 0, z: 0}
   triggerName: 
   tomatoPrefab: {fileID: 771148562}
   cutTomatoPrefab: {fileID: 223603286}
@@ -4214,7 +4215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476482, guid: 67435d26dd28e19428756fd8856eeeb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.325573
+      value: -23.096
       objectReference: {fileID: 0}
     - target: {fileID: 476482, guid: 67435d26dd28e19428756fd8856eeeb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5531,8 +5532,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7728415, y: 1.4741068, z: 2.3275585}
-  m_Center: {x: 5.694842, y: -4.4425054, z: -5.316723}
+  m_Size: {x: 1.9958878, y: 1.4741068, z: 2.6801138}
+  m_Center: {x: 5.806365, y: -4.4425054, z: -5.140445}
 --- !u!4 &1003895312
 Transform:
   m_ObjectHideFlags: 0
@@ -5646,7 +5647,7 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 120
+  - appearTime: 80
     isSpawned: 0
     needsCutTomato: 0
     needsCutMelon: 0
@@ -5655,7 +5656,7 @@ MonoBehaviour:
     needsKetchup: 0
     needsSalmon: 0
     needsLollipop: 0
-  - appearTime: 160
+  - appearTime: 100
     isSpawned: 0
     needsCutTomato: 1
     needsCutMelon: 1
@@ -6786,8 +6787,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.399476, y: 1.0643992, z: 2.1182647}
-  m_Center: {x: -2.8714108, y: 3.3210347, z: 2.0348394}
+  m_Size: {x: 2.7727985, y: 1.0643992, z: 2.1182647}
+  m_Center: {x: -3.058072, y: 3.3210347, z: 2.0348394}
 --- !u!4 &1328492913
 Transform:
   m_ObjectHideFlags: 0
@@ -8342,7 +8343,7 @@ Transform:
   m_GameObject: {fileID: 1609399403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8657243, y: -1.076973, z: 4.196844}
+  m_LocalPosition: {x: 0.8657243, y: -4.87, z: 4.196844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10775,8 +10776,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3425112, y: 0.71033454, z: 3.216899}
-  m_Center: {x: -1.084724, y: -0.14483273, z: -0.27609444}
+  m_Size: {x: 1.5128138, y: 0.71033454, z: 3.216899}
+  m_Center: {x: -0.99957263, y: -0.14483273, z: -0.27609444}
 --- !u!4 &2007122222
 Transform:
   m_ObjectHideFlags: 0

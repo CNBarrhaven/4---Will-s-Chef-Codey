@@ -166,7 +166,7 @@ public class orderManager : MonoBehaviour
     public void removeOrder(GameObject orderSlot)
     {
         Debug.Log("removing order slot " + orderSlot);
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 8; i++)
         {
             orderSlot.transform.GetChild(i).gameObject.SetActive(false);
         }

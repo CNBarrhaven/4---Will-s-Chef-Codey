@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class interact : MonoBehaviour
 {
+    public Vector3 startingPosition;
+
     public string triggerName = "";
 
     public GameObject tomatoPrefab;
@@ -26,12 +28,19 @@ public class interact : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        startingPosition = gameObject.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.transform.position.y <= -5)
+        {
+            gameObject.transform.position = startingPosition;
+            print("Teleported");
+        }
+
+
         if (Input.GetKeyDown("space"))
         {
             switch(triggerName)
@@ -154,7 +163,10 @@ public class interact : MonoBehaviour
                 case "Pan":
                     if (fry.lollipopReady)
                     {
-                        Destroy(GameObject.Find(heldItem.name));
+                        if (heldItemName != "")
+                        {
+                            Destroy(GameObject.Find(heldItem.name));
+                        }
                         heldItem = Instantiate(lollipopPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Lollipop";
@@ -163,7 +175,10 @@ public class interact : MonoBehaviour
                     }
                     else if (fry.salmonReady)
                     {
-                        Destroy(GameObject.Find(heldItem.name));
+                        if (heldItemName != "")
+                        {
+                            Destroy(GameObject.Find(heldItem.name));
+                        }
                         heldItem = Instantiate(salmonPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Salmon";
@@ -172,7 +187,10 @@ public class interact : MonoBehaviour
                     }
                     else if (fry.ketchupReady)
                     {
-                        Destroy(GameObject.Find(heldItem.name));
+                        if (heldItemName != "")
+                        {
+                            Destroy(GameObject.Find(heldItem.name));
+                        };
                         heldItem = Instantiate(ketchupPrefab, transform, false);
                         heldItem.transform.localPosition = new Vector3(0, 4, 0);
                         heldItemName = "Ketchup";

@@ -32,7 +32,7 @@ public class timerScript : MonoBehaviour
                 platinumTime = "00:30";
                 break;
             case 2:
-                bronzeTime = "01:30";
+                bronzeTime = "02:30";
                 silverTime = "02:00";
                 goldTime = "01:30";
                 platinumTime = "01:10";
@@ -42,6 +42,48 @@ public class timerScript : MonoBehaviour
                 silverTime = "02:40";
                 goldTime = "02:10";
                 platinumTime = "01:40";
+                break;
+            case 4:
+                bronzeTime = "04:20";
+                silverTime = "03:20";
+                goldTime = "02:30";
+                platinumTime = "02:00";
+                break;
+            case 5:
+                bronzeTime = "05:00";
+                silverTime = "04:00";
+                goldTime = "03:20";
+                platinumTime = "02:30";
+                break;
+            case 6:
+                bronzeTime = "06:00";
+                silverTime = "04:50";
+                goldTime = "04:10";
+                platinumTime = "03:30";
+                break;
+            case 7:
+                bronzeTime = "06:20";
+                silverTime = "05:00";
+                goldTime = "04:20";
+                platinumTime = "03:40";
+                break;
+            case 8:
+                bronzeTime = "07:30";
+                silverTime = "06:40";
+                goldTime = "06:10";
+                platinumTime = "05:40";
+                break;
+            case 9:
+                bronzeTime = "07:50";
+                silverTime = "06:50";
+                goldTime = "06:20";
+                platinumTime = "05:50";
+                break;
+            case 10:
+                bronzeTime = "14:00";
+                silverTime = "12:00";
+                goldTime = "10:30";
+                platinumTime = "09:30";
                 break;
         }
         bronzeText.text = "Bronze: " + bronzeTime;

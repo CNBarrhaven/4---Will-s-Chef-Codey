@@ -4366,10 +4366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 9
-  bronzeTime: 0
-  silverTime: 0
-  goldTime: 0
-  platinumTime: 1
+  bronzeTime: 470
+  silverTime: 410
+  goldTime: 380
+  platinumTime: 350
   highScore: {fileID: 1531114985}
   highScoreNumber: 0
 --- !u!114 &802245988
@@ -7724,10 +7724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 7
-  bronzeTime: 0
-  silverTime: 0
-  goldTime: 0
-  platinumTime: 1
+  bronzeTime: 380
+  silverTime: 300
+  goldTime: 260
+  platinumTime: 220
   highScore: {fileID: 886312704}
   highScoreNumber: 0
 --- !u!114 &1344035339
@@ -8338,10 +8338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 6
-  bronzeTime: 90
-  silverTime: 70
-  goldTime: 50
-  platinumTime: 1
+  bronzeTime: 360
+  silverTime: 290
+  goldTime: 250
+  platinumTime: 210
   highScore: {fileID: 447453017}
   highScoreNumber: 0
 --- !u!114 &1438018300
@@ -9839,7 +9839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 4
-  bronzeTime: 259
+  bronzeTime: 260
   silverTime: 200
   goldTime: 150
   platinumTime: 120
@@ -10396,10 +10396,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 10
-  bronzeTime: 0
-  silverTime: 0
-  goldTime: 0
-  platinumTime: 1
+  bronzeTime: 840
+  silverTime: 720
+  goldTime: 630
+  platinumTime: 570
   highScore: {fileID: 1983405614}
   highScoreNumber: 0
 --- !u!114 &1810216790
@@ -11774,10 +11774,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 5
-  bronzeTime: 0
-  silverTime: 0
-  goldTime: 0
-  platinumTime: 1
+  bronzeTime: 300
+  silverTime: 240
+  goldTime: 200
+  platinumTime: 150
   highScore: {fileID: 130414086}
   highScoreNumber: 0
 --- !u!1 &1983405612
@@ -12028,6 +12028,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025766953}
   m_CullTransparentMesh: 1
+--- !u!1 &2042463982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042463983}
+  m_Layer: 0
+  m_Name: Amanda Was Here
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042463983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042463982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045849672
 GameObject:
   m_ObjectHideFlags: 0
@@ -12323,10 +12354,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completionScript: {fileID: 1779143449}
   levelNumber: 8
-  bronzeTime: 0
-  silverTime: 0
-  goldTime: 0
-  platinumTime: 1
+  bronzeTime: 450
+  silverTime: 400
+  goldTime: 370
+  platinumTime: 340
   highScore: {fileID: 423703255}
   highScoreNumber: 0
 --- !u!114 &2078715688
@@ -12832,3 +12863,4 @@ SceneRoots:
   - {fileID: 1844311245}
   - {fileID: 1961929573}
   - {fileID: 924593784}
+  - {fileID: 2042463983}
